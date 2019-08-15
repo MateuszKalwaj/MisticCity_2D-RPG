@@ -10,6 +10,7 @@ public class PlayerLoader : MonoBehaviour {
     void Start() {
         if(PlayerController.instance == null) {
             Instantiate(player);
+            Debug.Log("Pojawiamsię z loadera");
         }
     }
 

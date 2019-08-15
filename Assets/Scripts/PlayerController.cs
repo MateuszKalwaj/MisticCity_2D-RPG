@@ -21,8 +21,10 @@ public class PlayerController : MonoBehaviour {
             instance = this;
         } else {
             Destroy(gameObject);
+            Debug.Log("Jestem niszczonym duplikatem");
         }
         DontDestroyOnLoad(gameObject);
+        Debug.Log("Jestem z Controllera i nie jestem zduplikowany");
     }
     // Update is called once per frame
     void Update()
@@ -41,8 +43,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void SetLevelBounds(Vector3 botLeft, Vector3 topRight) {
-        bottomLeftLimit = botLeft;
-        topRightLimit = topRight;
+        bottomLeftLimit = botLeft + new Vector3(0.5f, 0.5f, 0f);
+        topRightLimit = topRight + new Vector3(-0.5f, -0.5f, 0f);
     }
 
 }

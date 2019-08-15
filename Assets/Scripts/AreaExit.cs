@@ -27,6 +27,7 @@ public class AreaExit : MonoBehaviour {
         if (other.tag == "Player") {
             SceneManager.LoadScene(areaToLoad);
             PlayerController.instance.areaTransitionName = areaTransitionName;
+            Debug.Log("Wyszedłem");
 
         }
     }
