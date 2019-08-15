@@ -13,6 +13,8 @@ public class AreaEntrance : MonoBehaviour {
            PlayerController.instance.transform.position = transform.position;
             Debug.Log("Wszedłem");
         }
+
+        UIFade.instance.FadeToBlack();
     }
 
     // Update is called once per frame

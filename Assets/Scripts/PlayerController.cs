@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour {
         if (instance == null) {
             instance = this;
         } else {
-            Destroy(gameObject);
+            if (instance != this) {
+                Destroy(gameObject);
+            }
             Debug.Log("Jestem niszczonym duplikatem");
         }
         DontDestroyOnLoad(gameObject);
