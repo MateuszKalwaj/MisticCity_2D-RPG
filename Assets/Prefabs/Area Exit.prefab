@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eab65ac6628da44fb0ad09df242829c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: Area1
+  transitionName: 
 --- !u!1 &4313809434073833978
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3a3fb3afc7bd74ea401bcbe86771ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaToLoad: Main_scene
-  areaTransitionName: Area1
+  areaToLoad: 
+  areaTransitionName: 
   theEntrance: {fileID: 737186965}
+  waitToLoad: 1
