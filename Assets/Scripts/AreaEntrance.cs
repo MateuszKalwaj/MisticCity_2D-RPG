@@ -14,7 +14,7 @@ public class AreaEntrance : MonoBehaviour {
             Debug.Log("Wszedłem");
         }
 
-        UIFade.instance.FadeToBlack();
+        UIFade.instance.FadeToGame();
     }
 
     // Update is called once per frame

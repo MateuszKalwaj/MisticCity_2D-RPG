@@ -29,8 +29,7 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Jestem z Controllera i nie jestem zduplikowany");
     }
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         theRB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
         myAnim.SetFloat("moveX", theRB.velocity.x);
         myAnim.SetFloat("moveY", theRB.velocity.y);

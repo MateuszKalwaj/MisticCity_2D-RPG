@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574246eb1826d2459b3de054d825807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIScreen: {fileID: 0}
+  player: {fileID: 8916624471959130114, guid: 98a3c580de7a4474b97c3b928d8911cf, type: 3}
