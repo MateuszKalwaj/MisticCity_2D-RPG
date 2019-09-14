@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737186965, guid: 14bc03b571e979849a375a254226861f, type: 3}
       propertyPath: transitionName
-      value: Hometown-1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 737186965, guid: 14bc03b571e979849a375a254226861f, type: 3}
       propertyPath: m_Enabled

@@ -242,6 +242,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1837171790, guid: ba01768e4000feb489f9b5b7582dae34, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.299988
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837171790, guid: ba01768e4000feb489f9b5b7582dae34, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -352.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837171790, guid: ba01768e4000feb489f9b5b7582dae34, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -201.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837171790, guid: ba01768e4000feb489f9b5b7582dae34, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -825.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01768e4000feb489f9b5b7582dae34, type: 3}
 --- !u!1001 &431218862
@@ -318,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737186965, guid: 14bc03b571e979849a375a254226861f, type: 3}
       propertyPath: transitionName
-      value: Suburbs-1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1923429377, guid: 14bc03b571e979849a375a254226861f, type: 3}
       propertyPath: areaToLoad
@@ -14706,9 +14722,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Czesc! Mam dla ciebie zagadke
-  - Od ciebie zalezy czy zgadniesz
-  - 'Oto ona: '
+  - n-Girl
+  - Witaj w miescie, poszukiwaczu! Tak dobrze cie tu widziec! Czekalismy na ciebie!
+  - n-Player
+  - czesc!
+  - n-Girl
+  - Potrzebujesz pomocy w poszukiwaniach?
+  - n-Player
+  - Jasne! Znasz droge?
+  - n-Girl
+  - No...prosze cie. Myslisz pewnie ze ci powiem ot tak?
+  - Hahahaha, nie tak latwo cymbale!
 --- !u!61 &1645530710
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ public class UIFade : MonoBehaviour {
 
     public Image fadeScreen;
     public float fadeSpeed;
-    private bool fadeToBlack;
-    private bool fadeToGame;
+    private bool shouldFadeToBlack;
+    private bool shouldFadeFromBlack;
 
 
 
@@ -22,32 +22,31 @@ public class UIFade : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-          if(fadeToBlack) {
+          if(shouldFadeToBlack) {
             fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b,
                 Mathf.MoveTowards(fadeScreen.color.a, 1f, fadeSpeed * Time.deltaTime));
 
             if (fadeScreen.color.a == 1f) {
-                fadeToBlack = false;
+                shouldFadeToBlack = false;
             }
           }
 
-          if (fadeToGame) {
-            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b,
-                Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
+          if (shouldFadeFromBlack) {
+            fadeScreen.color = new Color(fadeScreen.color.r, fadeScreen.color.g, fadeScreen.color.b, Mathf.MoveTowards(fadeScreen.color.a, 0f, fadeSpeed * Time.deltaTime));
 
             if (fadeScreen.color.a == 0f) {
-               fadeToGame = false;
+               shouldFadeFromBlack = false;
             }
         }
     }
 
     public void FadeToBlack() {
-        fadeToBlack = true;
-        fadeToGame = false;
+        shouldFadeToBlack = true;
+        shouldFadeFromBlack = false;
     }
 
     public void FadeToGame() {
-        fadeToBlack = false;
-        fadeToGame = true;
+        shouldFadeToBlack = false;
+        shouldFadeFromBlack = true;
     }
 }
