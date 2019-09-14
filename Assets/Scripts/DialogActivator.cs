@@ -6,6 +6,7 @@ public class DialogActivator : MonoBehaviour {
 
     public string[] lines;
     private bool canActivate;
+    public bool isPerson = true;
 
     // Start is called before the first frame update
     void Start() {
@@ -15,7 +16,7 @@ public class DialogActivator : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if(canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy) { //activInHierarchy-Defines whether the GameObject is active in the Scene.
-            DialogManager.instance.ShowDialog(lines);
+            DialogManager.instance.ShowDialog(lines, isPerson);
         }
     }
 
