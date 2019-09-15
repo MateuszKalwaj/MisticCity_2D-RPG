@@ -15,6 +15,7 @@ public class CharStats : MonoBehaviour {
     public int maxHP = 100;
     public int currentMP;
     public int maxMP = 30;
+    public int[] mpLvlBonus;
     public int strength;
     public int defence;
     public int wpnPwr;
@@ -31,12 +32,44 @@ public class CharStats : MonoBehaviour {
         for(int i = 2; i < expToNextLevel.Length; i++) {
             expToNextLevel[i] = Mathf.FloorToInt(expToNextLevel[i - 1] * 1.05f);
         }
-        
     }
 
     // Update is called once per frame
     void Update() {
+        //testing player leveling
 
+        if(Input.GetKeyDown(KeyCode.K)) {
+            AddExp(1000);
+        }
         
+    }
+
+    public void AddExp(int expToAdd) {
+        currentEXP += expToAdd;
+
+        if(playerLevel < maxLevel) {
+
+            if(currentEXP > expToNextLevel[playerLevel]) {
+                currentEXP -= expToNextLevel[playerLevel];
+                playerLevel++;
+
+                //if there's even number-add strength, if odd-add defence
+                if(playerLevel%2 == 0) {
+                    strength++;
+                } else {
+                    defence++;
+                }
+
+                maxHP = Mathf.FloorToInt(maxHP * 1.05f); //int*float possible because of Mathf.FloorToInt
+                currentHP = maxHP;
+
+                maxMP += mpLvlBonus[playerLevel];
+                currentMP = maxMP;
+            }
+        }
+
+        if(playerLevel >= maxLevel) {
+            currentEXP = 0;
+        }
     }
 }
