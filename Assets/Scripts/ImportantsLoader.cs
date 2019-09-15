@@ -5,6 +5,7 @@ using UnityEngine;
 public class ImportantsLoader : MonoBehaviour {
     public GameObject UIScreen;
     public GameObject player;
+    public GameObject gameManager;
 
     // Start is called before the first frame update
     void Start() {
@@ -16,6 +17,10 @@ public class ImportantsLoader : MonoBehaviour {
         if(PlayerController.instance == null) {
            PlayerController clone = Instantiate(player).GetComponent<PlayerController>();
             PlayerController.instance = clone;
+        }
+
+        if(GameManager.instance == null) {
+            Instantiate(gameManager);
         }
 
     }
